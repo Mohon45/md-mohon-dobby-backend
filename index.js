@@ -6,11 +6,11 @@ const dotenv = require("dotenv").config();
 const indexRoute = require("./routes/index");
 
 // database connections
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.m0coh.mongodb.net/hellwet?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.m0coh.mongodb.net/dobby?retryWrites=true&w=majority`;
 
 // Mongoose Connect
 mongoose
-  .connect(process.env.LOCAL_DB, {
+  .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
